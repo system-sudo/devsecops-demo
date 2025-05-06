@@ -28,6 +28,9 @@ kubectl create secret docker-registry github-container-registry \
 
 Replace the placeholders with your actual GitHub credentials.
 
+## Port Farwarding
+nohup kubectl port-forward svc/argocd-server 9080:80 -n argocd --address 0.0.0.0 > port-forward.log 2>&1 &
+
 ## Deployment
 
 To deploy the application:
