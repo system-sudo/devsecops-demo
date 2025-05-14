@@ -8,6 +8,8 @@ RUN npm run build
 
 # Production stage
 FROM nginx:alpine
+# Update libxml2 to a patched version
+RUN apk update && apk upgrade libxml2
 COPY --from=build /app/dist /usr/share/nginx/html
 # Add nginx configuration if needed
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
