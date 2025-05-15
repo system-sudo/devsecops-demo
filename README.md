@@ -88,3 +88,6 @@ yarn build
 
 The build artifacts will be stored in the `dist/` directory.
 
+## For path based routing using nginx
+
+
